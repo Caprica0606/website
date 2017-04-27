@@ -105,7 +105,7 @@ nav.hover{
 .menu li {
     font-size: 20px;
     padding: 6px;
-    padding-bottom: 10px;
+    max-width: 300px;
     margin-bottom: 7px;
     background-color: #443700;
     color: #EAEAEA;
