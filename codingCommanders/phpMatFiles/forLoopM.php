@@ -1,40 +1,65 @@
+<?php
+include 'vars.php';
+include 'lessonTemplate.php';
+$introPara = "<i>(If you are unsure what a loop is, visit
+<a href = 'loopsM.php'>What is a loop?</a></i>)";
+$tableName = "forLoop_examples";
+$columnName1 = "topic";
+$columnName2 = "image";
+$columnName3 = "paragraph";
+$exampleTitles = convertToArray($tableName,$columnName1);
+$exampleImages = convertToArray($tableName,$columnName2);
+$exampleParas = convertToArray($tableName,$columnName3);
+?>
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="codingCommanders.css">
-<title>Coding Commanders</title>
-<style>
-p{
-  color: black;
-}
-</style>
-</head>
-<body background = "transLogo.png">
-<!-- top menu-->
-  <div class = "menuDiv">
-    <span class = "row">
-      <a class = "nav" href = "codingCommanders.php">Home</a> <a class ="nav" href ="curriculum.php">Curriculum</a>  <a class = "nav" href = "https://www.youtube.com/channel/UC-gCUMK_EGUqJ7P9VA7BJmQ">YouTube Channel</a> <a class = "nav" href = "blog.html">B l o g</a>
-    </span>
-   </div>
-   <!-- Content Container-->
-   <div col-6 align = "center">
-     <h1 font-famil = "Lucida Console">for loops</h1>
-     <img src = "forLoop.PNG"><img>
-     <h5 font-family = "Lucida Console">for loop syntax</h5>
-     <p>The "init counter" is where you want your loop to start counting.
-     The test counter is the condition you want met for the loop to continue.
-     The increment counter will modify your counter.
-     You may want to increment, decrement, or do something else.</p>
-     <h2></h2>
-     <img align = "center" src = "forLoopSyn.PNG"><img>
-     <h5 font-family = "Lucida Console">for loop example</h5>
-     <img src = "forLoopExample.PNG"><img>
-     <h5 font-family = "Lucida Console">for loop to print an array</h5>
-     <img src = "forLoopPrint.PNG"><img>
-   </div>
-   <br><br>
-   <!-- Code Editior-->
-  <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/HZzv/1"></iframe>
-</body>
-</html>
+  <html>
+  <?php
+  $title = "Intro to PHP: For Loop";
+  // html head
+  pageHead($title);
+  echo $body;
+  // page header
+  buildHeading ($title);
+  echo $row;
+  echo $col3;
+  echo $divEnd;
+  echo $col6;
+  echo $center;
+  echo "<p>" . $introPara . "</p>";
+  echo $divEnd;
+  echo $divEnd;
+  echo $divEnd;
+  echo $row;
+  echo $col3;
+  $text1 =
+'for ($i = /*init*/; $i < /*test*/; $i/*increment*/) {
+  /*code*/;
+}';
+  $text2 =
+  'for ($i = 1; $i < 10; $i++) {
+    echo $i."<br>";
+}';
+  $copyName1 = 'forLoopSyntax';
+  $lable1 = 'For Loop Syntax';
+  $copyName2 = 'forLoopExample';
+  $lable2 = 'For Loop Example';
+  $numRows = 2;
+  buildCopyBox ($copyName1,$lable1,$text1,$numRows);
+  buildCopyBox ($copyName2,$lable2,$text2,$numRows);
+  echo $divEnd;
+  echo $col6;
+  showExamples ($exampleTitles,$exampleImages,$exampleParas);
+  echo "<br>";
+  $assignment = array ("Create a for loop for a card game. Each player receives 5 random cards
+  from the deck. The loop should iterate until each player has
+  5 random cards.");
+  $assTopic = array ("Applied Assignment");
+  makeParagraphs($assignment,$assTopic);
+  echo $divEnd;
+  echo $divEnd;
+  ?>
+    <!-- Code Editior-->
+     <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/HZzv/1"></iframe>
+    <script src="copyBox.js"></script>
+  </body>
+?>

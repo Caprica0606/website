@@ -1,5 +1,4 @@
 
-
 label {
   clear: both;
   font-size: 14px;
@@ -7,6 +6,38 @@ label {
   padding: 0.8em 0 0.2em 0;
   user-select: none;
   color: black;
+}
+
+.atom {
+  background-color: #282C34;
+  box-shadow: 4px 4px 2.5px #091323;
+  max-width: 90%;
+  font-size: 24px;
+  border-radius: 9px;
+  padding: 5px;
+  color: #D9D9D9;
+
+}
+.lgrey {
+  color: #D9D9D9;
+}
+.pur {
+  color: #905EB5;
+}
+.blu {
+  color: #00B0F0;
+}
+
+.yel {
+color:  #FFD800;
+}
+
+.or {
+  color: #FFC014;
+}
+
+.rd {
+  color: #E06C75;
 }
 
 input,
@@ -37,11 +68,12 @@ input {
 button {
   position: relative;
   background-color: green;
-  color: lightyellow;
+  color: tan;
   font-weight: bold;
   border-radius: 0 3px 3px 0;
   padding: 2px;
   cursor: pointer;
+
 }
 
 .copied::after {
@@ -73,12 +105,22 @@ button {
     opacity: 0;
   }
 }
-
+.classyDiv {
+  padding: 10px;
+  background-color: rgb(101,149,93);
+  border-radius: 9px;
+  color: black;
+  font-style: sans-serif;
+  font-size: 18px;
+  line-height: 200%;
+  text-emphasis: bolder;
+  background-color: #FFFF66;
+  box-shadow: 4px 4px 2.5px #443700;
+  align: "center";
+}
 p {
   padding: 10px;
   border-radius: 9px;
-  margin-left: 100px;
-  margin-right:100px;
   color: black;
   font-style: sans-serif;
   font-size: 18px;
@@ -87,6 +129,10 @@ p {
   background-color: #FFFF66;
   box-shadow: 4px 4px 2.5px #443700;
   max-width: 66.6%;
+  align: "center";
+}
+col-7{
+  align: "center";
 }
 a:link{
   color: green;
@@ -97,6 +143,11 @@ a.hover{
 h3 {
   color: #443700;
 }
+.codeWrite {
+  blackground-color: #282A34;
+  font-style: Helvetica,sans-serif;
+  color: #DBDBDB;
+}
 h6 {
   color: black;
   font-style: Helvetica,sans-serif;
@@ -105,8 +156,11 @@ h6 {
 }
 img {
   border-radius: 6px;
+  max-width: 100%;
+  height: auto;
 }
 .copyContainer {
   margin-left: 20px;
-  padding: 15px;
+  padding: 20px;
+  max-height: 350px;
 }

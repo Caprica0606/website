@@ -25,7 +25,7 @@ html {
 }
 
 a:hover {
-    color: darkRed;
+    color: green;
 
 }
 
@@ -38,6 +38,7 @@ a:hover {
 }
 a:link {
     text-decoration: none;
+    color: black;
 }
 
 .sidebar {
@@ -97,7 +98,7 @@ a:link {
   margin:0;
 }
 nav.hover{
-  color: darkRed;
+  color: green;
   text-decoration: none;
 }
 
@@ -113,7 +114,7 @@ nav.hover{
     border-radius:10px;
 }
 .menu li:hover {
-    background-color: darkred;
+    background-color: green;
 }
 
 .aside {
